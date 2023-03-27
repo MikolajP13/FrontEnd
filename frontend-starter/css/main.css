@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --text-color: #4D4D4D;
+  --background-color: #FFF4E0;
+  --primary-accent-color: #B46060;
+  --secondary-accent-color: hsl(22, 100%, 92%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.page {
+  min-height: 100vh;
+  background-color: var(--background-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 800px;
+  min-height: 600px;
+  border: var(--primary-accent-color) solid 4px;
+  border-radius: 8px;
+  background-color: var(--secondary-accent-color);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-image {
+  background-image: url('https://cdn5.tropicalsky.co.uk/images/800x600/maldives-getty-image-infinity-pool.jpg');
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+
+  border-radius: 4px 0 0 4px;
+}
+
+.card-main {
+  padding: 16px;
+}

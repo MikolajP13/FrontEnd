@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+
+:root{
+  --text-color: #00909E;
+  --background-color: #BBD6B8;
+  --primary-accent-color: #AEC2B6;
+  --secondary-accent-color: #94AF9F;
+  --tertiary-accent-color: #DBE4C6;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Alkatra', cursive;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.page{
+  background-color: var(--background-color);
+  min-height: 100vh; /* 100vh == 100% wysokości obszaru roboczego */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  width: 800px;
+  min-height: 400px;
+  border: var(--primary-accent-color) solid 4px;
+  border-radius: 12px; /* zaokrąglenie rogów ramki*/
+  display: grid;  /* grid do utworzenia kolumn */
+  grid-template-columns: 1fr 1fr; /* podział na dwie równe kolumny */
+}
+
+.card-img{
+  background-image: url("https://cdn.britannica.com/67/19367-050-885866B4/Valley-Taurus-Mountains-Turkey.jpg");
+  background-size: cover; /* skaluje obraz i wypełnia container */
+  background-repeat: no-repeat;
+  background-position: right center;
+  border-radius: 6px 0 0 6px;
+}
+
+.card-main{
+  padding: 15px;
+}
+
+.card-second{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.card-img-text{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-img-second{
+  background-image: url("https://freedesignfile.com/upload/2012/09/Sport-elements-text-mix-vector.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 80%;
+  border-radius: 6px;
+}
+
+.card-text{
+  padding-left: 10px;
+}
+
+p{
+  padding-top: 10px;
+}
