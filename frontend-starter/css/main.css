@@ -1,3 +1,96 @@
+/*========desktop-first========*/
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');*/
+
+/*:root {*/
+/*  --text-color: #4D4D4D;*/
+/*  --background-color: #FFF4E0;*/
+/*  --primary-accent-color: #B46060;*/
+/*  --secondary-accent-color: hsl(22, 100%, 92%);*/
+/*}*/
+
+/** {*/
+/*  box-sizing: border-box;*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  font-family: Roboto, sans-serif;*/
+/*  font-weight: 400;*/
+/*  font-size: 16px;*/
+/*  color: var(--text-color);*/
+/*}*/
+
+/*.page {*/
+/*  min-height: 100vh;*/
+/*  background-color: var(--background-color);*/
+
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*}*/
+
+/*.card {*/
+/*  width: 800px;*/
+/*  min-height: 600px;*/
+/*  border: var(--primary-accent-color) solid 4px;*/
+/*  border-radius: 8px;*/
+/*  background-color: var(--secondary-accent-color);*/
+
+/*  display: grid;*/
+/*  grid-template-columns: 1fr 1fr;*/
+/*}*/
+
+/*.card-image {*/
+/*  background-image: url('https://cdn5.tropicalsky.co.uk/images/800x600/maldives-getty-image-infinity-pool.jpg');*/
+/*  background-size: cover;*/
+/*  background-position: right center;*/
+/*  background-repeat: no-repeat;*/
+
+/*  border-radius: 4px 0 0 4px;*/
+/*}*/
+
+/*.card-main {*/
+/*  padding: 16px;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  margin: 0 15px 15px 0;*/
+/*  justify-content: space-between;*/
+/*  gap: 16px;*/
+/*}*/
+
+/*.card-main > h2{*/
+/*  font-size: 1.5rem;*/
+/*  font-weight: 700;*/
+/*}*/
+
+/*.card-main > article > img{*/
+/*  width: 100px;*/
+/*  float: left;*/
+/*  margin: 0 15px 15px 0;*/
+/*}*/
+
+/*!*wcięcie/akapit ::before -> dodanie zawartości przed elementem p*!*/
+/*.card-main > article > p::before{ */
+/*  margin-right: 2em;*/
+/*  content: "";*/
+/*}*/
+
+/*.card-main > p {*/
+/*  align-self: flex-end;*/
+/*  font-size: 0.8rem;*/
+/*}*/
+
+/*@media (max-width: 800px) {*/
+/*  .card{*/
+/*    width: initial;*/
+/*    grid-template-rows: 1fr 2.3fr;*/
+/*    grid-template-columns: none;*/
+/*  }*/
+
+/*  .card-image{*/
+/*    border-radius: 4px 4px 0 0;*/
+/*  }*/
+/*}*/
+
+/*========mobile-first========*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
@@ -27,14 +120,12 @@
 }
 
 .card {
-  width: 800px;
-  min-height: 600px;
   border: var(--primary-accent-color) solid 4px;
   border-radius: 8px;
   background-color: var(--secondary-accent-color);
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2.3fr;
 }
 
 .card-image {
@@ -43,9 +134,53 @@
   background-position: right center;
   background-repeat: no-repeat;
 
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px 4px 0 0;
 }
 
 .card-main {
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px 15px 0;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.card-main > h2{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.card-main > article > img{
+  width: 100px;
+  float: left;
+  margin: 0 15px 15px 0;
+}
+
+/*wcięcie/akapit ::before -> dodanie zawartości przed elementem p*/
+.card-main > article > p::before{
+  margin-right: 2em;
+  content: "";
+}
+
+.card-main > p {
+  align-self: flex-end;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 800px) {
+  .card{
+    width: 800px;
+    grid-template-rows: none;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-image{
+    border-radius: 4px 0 0 4px;
+  }
+
+  .card-main > article > p {
+    /*color: dodgerblue !important;*/
+    text-align: justify;
+  }
 }
