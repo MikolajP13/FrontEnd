@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;700&display=swap');
+
+:root{
+  --background-color: #7AA874;
+  --primary-color: #B9EDDD;
+  --text-color: black;
+  /*7AA874*/
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Chivo mono', monospace;
+  font-weight: 700;
+  color: var(--text-color);
+
+}
+
+.page{
+  min-height: 100vh;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator{
+  border: var(--primary-color) solid 5px;
+  border-radius: 8px;
+  background-color: #B9E9FC;
+}
+
+.calculator > div{
+  margin: 5px;
+}
+
+.calculator-keys{
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(4, auto);
+  grid-template-areas:
+    "one two three plus remove-all"
+    "four five six minus percent"
+    "seven eight nine multiply enter"
+    "remove-last zero dot divide enter";
+}
+
+.calculator-result-number{
+  display: flex;
+  flex-direction: column;
+  padding-right: 15px;
+  font-size: 25px;
+  text-align: right;
+  border-bottom: var(--primary-color) solid 5px;
+  background-color: #F2E3DB;
+}
+
+.calculator > div > button {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 5px;
+}
+
+.calculator > div > button:hover {
+  color: white;
+  background-color: black;
+}
+
+#enter-button{
+  background-image: url("https://cdn-icons-png.flaticon.com/512/109/109618.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 110px;
+}
+
+#enter-button:hover{
+  background-image: url("https://flaticons.net/icon.php?slug_category=mobile-application&slug_icon=left-arrow");
+}
+
+/*column-1*/
+#one-button{
+  grid-area: one;
+}
+#four-button {
+  grid-area: four;
+}
+#seven-button {
+  grid-area: seven;
+}
+#remove-last-char-button{
+  grid-area: remove-last;
+}
+/*column-2*/
+#two-button{
+  grid-area: two;
+}
+#five-button {
+  grid-area: five;
+}
+#eight-button {
+  grid-area: eight;
+}
+#zero-button {
+  grid-area: zero;
+}
+/*column-3*/
+#three-button{
+  grid-area: three;
+}
+#six-button {
+  grid-area: six;
+}
+#nine-button {
+  grid-area: nine;
+}
+#dot-button{
+  grid-area: dot;
+}
+/*column-4*/
+#plus-button{
+  grid-area: plus;
+}
+#minus-button{
+  grid-area: minus;
+}
+#multiply-button{
+  grid-area: multiply;
+}
+#divide-button{
+  grid-area: divide;
+}
+/*column-5*/
+#remove-all-button{
+  grid-area: remove-all;
+}
+#percent-button{
+  grid-area: percent;
+}
+#enter-button{
+  grid-area: enter;
+}
