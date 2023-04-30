@@ -1,23 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;700&display=swap');
 
-:root{
+:root {
   --background-color: #7AA874;
   --primary-color: #B9EDDD;
   --text-color: black;
   /*7AA874*/
 }
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Chivo mono', monospace;
   font-weight: 700;
   color: var(--text-color);
-
 }
 
-.page{
+.page {
   min-height: 100vh;
   background-color: var(--background-color);
   display: flex;
@@ -26,18 +25,20 @@
   align-items: center;
 }
 
-.calculator{
+.calculator {
   border: var(--primary-color) solid 5px;
   border-radius: 8px;
   background-color: #B9E9FC;
   min-height: 50vh;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
-.calculator > div{
+.calculator > div {
   margin: 5px;
 }
 
-.calculator-keys{
+.calculator-keys {
   display: grid;
   grid-gap: 2px;
   grid-template-columns: repeat(4, auto);
@@ -48,7 +49,7 @@
     "remove-last zero dot divide enter";
 }
 
-.calculator-result-number{
+.calculator-result-number {
   display: flex;
   flex-direction: column;
   padding-right: 15px;
@@ -62,17 +63,17 @@
   width: 60px;
   height: 60px;
   border-radius: 10px;
-  font-size: 30px;
+  font-size: 20px;
   margin: 5px;
   transition: background-color 0.3s ease-in-out;
 }
 
-.calculator > div > button:active{
-    color: white;
-    background-color: black;
+.calculator > div > button:active {
+  color: white;
+  background-color: black;
 }
 
-#enter-button{
+#enter-button {
   background-image: url("https://cdn-icons-png.flaticon.com/512/109/109618.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -80,70 +81,88 @@
   height: 130px;
 }
 
-#enter-button:active{
+#enter-button:active {
   background-image: url("https://flaticons.net/icon.php?slug_category=mobile-application&slug_icon=left-arrow");
 }
 
 /*column-1*/
-#one-button{
+#one-button {
   grid-area: one;
 }
+
 #four-button {
   grid-area: four;
 }
+
 #seven-button {
   grid-area: seven;
 }
-#remove-last-char-button{
+
+#remove-last-char-button {
   grid-area: remove-last;
 }
+
 /*column-2*/
-#two-button{
+#two-button {
   grid-area: two;
 }
+
 #five-button {
   grid-area: five;
 }
+
 #eight-button {
   grid-area: eight;
 }
+
 #zero-button {
   grid-area: zero;
 }
+
 /*column-3*/
-#three-button{
+#three-button {
   grid-area: three;
 }
+
 #six-button {
   grid-area: six;
 }
+
 #nine-button {
   grid-area: nine;
 }
-#dot-button{
+
+#dot-button {
   grid-area: dot;
 }
+
 /*column-4*/
-#plus-button{
+#plus-button {
   grid-area: plus;
 }
-#minus-button{
+
+#minus-button {
   grid-area: minus;
 }
-#multiply-button{
+
+#multiply-button {
   grid-area: multiply;
 }
-#divide-button{
+
+#divide-button {
   grid-area: divide;
 }
+
 /*column-5*/
-#remove-all-button{
+#remove-all-button {
   grid-area: remove-all;
 }
-#percent-button{
+
+#percent-button {
   grid-area: percent;
 }
-#enter-button{
+
+#enter-button {
   grid-area: enter;
 }
 
@@ -155,20 +174,25 @@
     font-size: 20px;
     margin: 5px;
   }
+
   .calculator-result-number {
     font-size: 30px;
   }
+
   .calculator {
     min-height: 0;
   }
-  #enter-button{
+
+  #enter-button {
     height: 110px;
   }
+
   .calculator > div > button:hover {
     color: white;
     background-color: black;
   }
-  #enter-button:hover{
+
+  #enter-button:hover {
     background-image: url("https://flaticons.net/icon.php?slug_category=mobile-application&slug_icon=left-arrow");
   }
 }
