@@ -30,6 +30,7 @@
   border: var(--primary-color) solid 5px;
   border-radius: 8px;
   background-color: #B9E9FC;
+  min-height: 50vh;
 }
 
 .calculator > div{
@@ -51,23 +52,24 @@
   display: flex;
   flex-direction: column;
   padding-right: 15px;
-  font-size: 25px;
+  font-size: 55px;
   text-align: right;
   border-bottom: var(--primary-color) solid 5px;
   background-color: #F2E3DB;
 }
 
 .calculator > div > button {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 30px;
   margin: 5px;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.calculator > div > button:hover {
-  color: white;
-  background-color: black;
+.calculator > div > button:active{
+    color: white;
+    background-color: black;
 }
 
 #enter-button{
@@ -75,10 +77,10 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 110px;
+  height: 130px;
 }
 
-#enter-button:hover{
+#enter-button:active{
   background-image: url("https://flaticons.net/icon.php?slug_category=mobile-application&slug_icon=left-arrow");
 }
 
@@ -143,4 +145,30 @@
 }
 #enter-button{
   grid-area: enter;
+}
+
+@media (min-width: 800px) {
+  .calculator > div > button {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 5px;
+  }
+  .calculator-result-number {
+    font-size: 30px;
+  }
+  .calculator {
+    min-height: 0;
+  }
+  #enter-button{
+    height: 110px;
+  }
+  .calculator > div > button:hover {
+    color: white;
+    background-color: black;
+  }
+  #enter-button:hover{
+    background-image: url("https://flaticons.net/icon.php?slug_category=mobile-application&slug_icon=left-arrow");
+  }
 }
